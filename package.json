@@ -1,0 +1,12 @@
+{
+  "name": "swarm-replay-extension",
+  "version": "0.1.3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/replay.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0"
+  }
+}

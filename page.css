@@ -1,0 +1,29 @@
+@media (prefers-reduced-motion: no-preference) {
+  html[data-swr-preparing="page"] body { opacity: 0 !important; }
+
+  html[data-swr-preparing="content"] :is(main, [role="main"]):not(:has(nav, header, footer, [role="navigation"], [role="banner"], [role="contentinfo"])) {
+    opacity: 0 !important;
+  }
+}
+
+[data-swr-page-state="hidden"] {
+  opacity: 0 !important;
+  transition-property: none !important;
+}
+
+[data-swr-page-state="hidden"],
+[data-swr-page-state="hidden"] * {
+  pointer-events: none !important;
+}
+
+[data-swr-page-state="surface"] {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  transition-property: none !important;
+}
+
+[data-swr-page-state="surface"]::before,
+[data-swr-page-state="surface"]::after {
+  visibility: hidden !important;
+}
